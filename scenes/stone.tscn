@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cf1vlsjnvep3e"]
+
+[ext_resource type="PackedScene" uid="uid://b7t6ts4vl2yv1" path="res://scenes/resource_area.tscn" id="1_0etwl"]
+[ext_resource type="Script" path="res://scripts/stone.gd" id="2_chcfx"]
+[ext_resource type="Texture2D" uid="uid://cqvh4b2sl2tbx" path="res://graphics/rock.png" id="3_4cnif"]
+
+[node name="Stone" instance=ExtResource("1_0etwl")]
+y_sort_enabled = true
+script = ExtResource("2_chcfx")
+collision_half_width = 6
+collision_half_height = 6
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(0, -4)
+texture = ExtResource("3_4cnif")
+
+[node name="CollisionForNavigation" parent="Body" index="0"]
+position = Vector2(0, 24)
+scale = Vector2(1, 1.0625)
+polygon = PackedVector2Array(-19, 1.73525, 23, 1.73525, 10, -52.7059, -9, -52.7059)
+
+[node name="Label" parent="." index="2"]
+offset_top = -46.0
+offset_bottom = -33.0

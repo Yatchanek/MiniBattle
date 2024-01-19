@@ -1,0 +1,536 @@
+[gd_scene load_steps=39 format=3 uid="uid://letal3lecv11"]
+
+[ext_resource type="Script" path="res://scripts/HUD_new.gd" id="1_0xuff"]
+[ext_resource type="Texture2D" uid="uid://dfq662lrsg77t" path="res://graphics/unit_buttons.png" id="3_70i7f"]
+[ext_resource type="PackedScene" uid="uid://crfdgw1le4edp" path="res://scenes/unit_purchase_button.tscn" id="3_nlv1p"]
+[ext_resource type="FontFile" uid="uid://5ppyd6notn34" path="res://fonts/m6x11 Daniel LInssen.ttf" id="5_rgaqu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nc02b"]
+bg_color = Color(0.0823529, 0.0823529, 0.0823529, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_f8wvk"]
+font = ExtResource("5_rgaqu")
+font_size = 32
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ft6l"]
+resource_local_to_scene = true
+atlas = ExtResource("3_70i7f")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjsrk"]
+resource_local_to_scene = true
+atlas = ExtResource("3_70i7f")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_svx7a"]
+resource_local_to_scene = true
+atlas = ExtResource("3_70i7f")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20t2v"]
+resource_local_to_scene = true
+atlas = ExtResource("3_70i7f")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otmff"]
+resource_local_to_scene = true
+atlas = ExtResource("3_70i7f")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tk0p3"]
+resource_local_to_scene = true
+atlas = ExtResource("3_70i7f")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d1nia"]
+resource_local_to_scene = true
+atlas = ExtResource("3_70i7f")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mafw8"]
+resource_local_to_scene = true
+atlas = ExtResource("3_70i7f")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74xri"]
+resource_local_to_scene = true
+atlas = ExtResource("3_70i7f")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqcwd"]
+resource_local_to_scene = true
+atlas = ExtResource("3_70i7f")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6nrfe"]
+resource_local_to_scene = true
+atlas = ExtResource("3_70i7f")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0efi"]
+resource_local_to_scene = true
+atlas = ExtResource("3_70i7f")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8bu4"]
+resource_local_to_scene = true
+atlas = ExtResource("3_70i7f")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pe7w1"]
+resource_local_to_scene = true
+atlas = ExtResource("3_70i7f")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kesiv"]
+resource_local_to_scene = true
+atlas = ExtResource("3_70i7f")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m7kxy"]
+resource_local_to_scene = true
+atlas = ExtResource("3_70i7f")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4dkug"]
+resource_local_to_scene = true
+atlas = ExtResource("3_70i7f")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3nk4"]
+resource_local_to_scene = true
+atlas = ExtResource("3_70i7f")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mcwd2"]
+resource_local_to_scene = true
+atlas = ExtResource("3_70i7f")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rn8bh"]
+resource_local_to_scene = true
+atlas = ExtResource("3_70i7f")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kytol"]
+resource_local_to_scene = true
+atlas = ExtResource("3_70i7f")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kucym"]
+resource_local_to_scene = true
+atlas = ExtResource("3_70i7f")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_foq77"]
+resource_local_to_scene = true
+atlas = ExtResource("3_70i7f")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gpcy0"]
+resource_local_to_scene = true
+atlas = ExtResource("3_70i7f")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ee3a8"]
+resource_local_to_scene = true
+atlas = ExtResource("3_70i7f")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q54rm"]
+bg_color = Color(0.235294, 0.235294, 0.235294, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_7mv0o"]
+font = ExtResource("5_rgaqu")
+font_size = 32
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xmn4i"]
+line_spacing = 0.0
+font = ExtResource("5_rgaqu")
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_pjnek"]
+font = ExtResource("5_rgaqu")
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qk88g"]
+bg_color = Color(0.235294, 0.235294, 0.235294, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_dna5a"]
+font = ExtResource("5_rgaqu")
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7w5jl"]
+font = ExtResource("5_rgaqu")
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_0xuff")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel" type="PanelContainer" parent="Control"]
+layout_mode = 0
+offset_right = 192.0
+offset_bottom = 720.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nc02b")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="PlayerResources" type="MarginContainer" parent="Control/Panel/MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+
+[node name="PlayerResourceCount" type="VBoxContainer" parent="Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/PlayerResources"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Wood" type="HBoxContainer" parent="Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/PlayerResources/PlayerResourceCount"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/PlayerResources/PlayerResourceCount/Wood"]
+custom_minimum_size = Vector2(45, 0)
+layout_mode = 2
+text = "Wood:"
+label_settings = SubResource("LabelSettings_f8wvk")
+
+[node name="WoodLabel" type="Label" parent="Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/PlayerResources/PlayerResourceCount/Wood"]
+layout_mode = 2
+text = "9999999"
+label_settings = SubResource("LabelSettings_f8wvk")
+
+[node name="Stone" type="HBoxContainer" parent="Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/PlayerResources/PlayerResourceCount"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/PlayerResources/PlayerResourceCount/Stone"]
+custom_minimum_size = Vector2(45, 0)
+layout_mode = 2
+text = "Stone:"
+label_settings = SubResource("LabelSettings_f8wvk")
+
+[node name="StoneLabel" type="Label" parent="Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/PlayerResources/PlayerResourceCount/Stone"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_f8wvk")
+
+[node name="Buttons" type="GridContainer" parent="Control/Panel/MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+columns = 3
+
+[node name="UnitPurchaseButton" parent="Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/Buttons" node_paths=PackedStringArray("hud") instance=ExtResource("3_nlv1p")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 1
+texture_normal = SubResource("AtlasTexture_7ft6l")
+texture_pressed = SubResource("AtlasTexture_xjsrk")
+texture_hover = SubResource("AtlasTexture_svx7a")
+texture_disabled = SubResource("AtlasTexture_20t2v")
+texture_focused = SubResource("AtlasTexture_otmff")
+hud = NodePath("../../../../../../..")
+
+[node name="UnitPurchaseButton2" parent="Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/Buttons" node_paths=PackedStringArray("hud") instance=ExtResource("3_nlv1p")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 1
+texture_normal = SubResource("AtlasTexture_tk0p3")
+texture_pressed = SubResource("AtlasTexture_d1nia")
+texture_hover = SubResource("AtlasTexture_mafw8")
+texture_disabled = SubResource("AtlasTexture_74xri")
+texture_focused = SubResource("AtlasTexture_bqcwd")
+unit_type = 1
+hud = NodePath("../../../../../../..")
+
+[node name="UnitPurchaseButton5" parent="Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/Buttons" node_paths=PackedStringArray("hud") instance=ExtResource("3_nlv1p")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 1
+texture_normal = SubResource("AtlasTexture_6nrfe")
+texture_pressed = SubResource("AtlasTexture_p0efi")
+texture_hover = SubResource("AtlasTexture_h8bu4")
+texture_disabled = SubResource("AtlasTexture_pe7w1")
+texture_focused = SubResource("AtlasTexture_kesiv")
+unit_type = 2
+hud = NodePath("../../../../../../..")
+
+[node name="UnitPurchaseButton3" parent="Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/Buttons" node_paths=PackedStringArray("hud") instance=ExtResource("3_nlv1p")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 1
+texture_normal = SubResource("AtlasTexture_m7kxy")
+texture_pressed = SubResource("AtlasTexture_4dkug")
+texture_hover = SubResource("AtlasTexture_n3nk4")
+texture_disabled = SubResource("AtlasTexture_mcwd2")
+texture_focused = SubResource("AtlasTexture_rn8bh")
+unit_type = 4
+hud = NodePath("../../../../../../..")
+
+[node name="UnitPurchaseButton6" parent="Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/Buttons" node_paths=PackedStringArray("hud") instance=ExtResource("3_nlv1p")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 1
+texture_normal = SubResource("AtlasTexture_kytol")
+texture_pressed = SubResource("AtlasTexture_kucym")
+texture_hover = SubResource("AtlasTexture_foq77")
+texture_disabled = SubResource("AtlasTexture_gpcy0")
+texture_focused = SubResource("AtlasTexture_ee3a8")
+unit_type = 3
+hud = NodePath("../../../../../../..")
+
+[node name="UnitInfoPanel" type="PanelContainer" parent="Control/Panel/MarginContainer/VBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_q54rm")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/UnitInfoPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/UnitInfoPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 11
+
+[node name="UnitNameLabel" type="Label" parent="Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/UnitInfoPanel/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Unit Name"
+label_settings = SubResource("LabelSettings_7mv0o")
+horizontal_alignment = 1
+
+[node name="Stats" type="GridContainer" parent="Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/UnitInfoPanel/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/v_separation = 6
+columns = 2
+
+[node name="Label" type="Label" parent="Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/UnitInfoPanel/MarginContainer/VBoxContainer/Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Attack	:"
+label_settings = SubResource("LabelSettings_xmn4i")
+vertical_alignment = 1
+
+[node name="AttackLabel" type="Label" parent="Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/UnitInfoPanel/MarginContainer/VBoxContainer/Stats"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+label_settings = SubResource("LabelSettings_xmn4i")
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/UnitInfoPanel/MarginContainer/VBoxContainer/Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Defense:"
+label_settings = SubResource("LabelSettings_xmn4i")
+vertical_alignment = 1
+
+[node name="DefenseLabel" type="Label" parent="Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/UnitInfoPanel/MarginContainer/VBoxContainer/Stats"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+label_settings = SubResource("LabelSettings_xmn4i")
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/UnitInfoPanel/MarginContainer/VBoxContainer/Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Max HP:"
+label_settings = SubResource("LabelSettings_xmn4i")
+vertical_alignment = 1
+
+[node name="MaxHpLabel" type="Label" parent="Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/UnitInfoPanel/MarginContainer/VBoxContainer/Stats"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+label_settings = SubResource("LabelSettings_xmn4i")
+vertical_alignment = 1
+
+[node name="Label7" type="Label" parent="Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/UnitInfoPanel/MarginContainer/VBoxContainer/Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Evasion:"
+label_settings = SubResource("LabelSettings_xmn4i")
+vertical_alignment = 1
+
+[node name="EvasionLabel" type="Label" parent="Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/UnitInfoPanel/MarginContainer/VBoxContainer/Stats"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+label_settings = SubResource("LabelSettings_xmn4i")
+vertical_alignment = 1
+
+[node name="Label8" type="Label" parent="Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/UnitInfoPanel/MarginContainer/VBoxContainer/Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Attack charge:"
+label_settings = SubResource("LabelSettings_xmn4i")
+vertical_alignment = 1
+
+[node name="AttackChargeLabel" type="Label" parent="Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/UnitInfoPanel/MarginContainer/VBoxContainer/Stats"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+label_settings = SubResource("LabelSettings_xmn4i")
+vertical_alignment = 1
+
+[node name="Cost" type="VBoxContainer" parent="Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/UnitInfoPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="WoodCostLabel" type="Label" parent="Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/UnitInfoPanel/MarginContainer/VBoxContainer/Cost"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Wood:"
+label_settings = SubResource("LabelSettings_pjnek")
+
+[node name="StoneCostLabel" type="Label" parent="Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/UnitInfoPanel/MarginContainer/VBoxContainer/Cost"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Stone:"
+label_settings = SubResource("LabelSettings_pjnek")
+
+[node name="Priorities" type="PanelContainer" parent="Control/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qk88g")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/Panel/MarginContainer/VBoxContainer/Priorities"]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel/MarginContainer/VBoxContainer/Priorities/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/Panel/MarginContainer/VBoxContainer/Priorities/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Gathering priority"
+label_settings = SubResource("LabelSettings_dna5a")
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Panel/MarginContainer/VBoxContainer/Priorities/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/Panel/MarginContainer/VBoxContainer/Priorities/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Wood"
+label_settings = SubResource("LabelSettings_7w5jl")
+
+[node name="PrioritySlider" type="HSlider" parent="Control/Panel/MarginContainer/VBoxContainer/Priorities/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.01
+value = 0.5
+allow_greater = true
+allow_lesser = true
+
+[node name="Stone" type="Label" parent="Control/Panel/MarginContainer/VBoxContainer/Priorities/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Stone"
+label_settings = SubResource("LabelSettings_7w5jl")
+
+[node name="AIResources" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -159.0
+offset_bottom = 67.0
+grow_horizontal = 0
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+
+[node name="AIResourceCount" type="VBoxContainer" parent="Control/AIResources"]
+custom_minimum_size = Vector2(92, 0)
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Wood" type="HBoxContainer" parent="Control/AIResources/AIResourceCount"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/AIResources/AIResourceCount/Wood"]
+custom_minimum_size = Vector2(45, 0)
+layout_mode = 2
+text = "Wood:"
+label_settings = SubResource("LabelSettings_f8wvk")
+
+[node name="WoodLabel" type="Label" parent="Control/AIResources/AIResourceCount/Wood"]
+layout_mode = 2
+text = "999999"
+label_settings = SubResource("LabelSettings_f8wvk")
+
+[node name="Stone" type="HBoxContainer" parent="Control/AIResources/AIResourceCount"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/AIResources/AIResourceCount/Stone"]
+custom_minimum_size = Vector2(45, 0)
+layout_mode = 2
+text = "Stone:"
+label_settings = SubResource("LabelSettings_f8wvk")
+
+[node name="StoneLabel" type="Label" parent="Control/AIResources/AIResourceCount/Stone"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_f8wvk")
+
+[connection signal="value_changed" from="Control/Panel/MarginContainer/VBoxContainer/Priorities/MarginContainer/VBoxContainer/HBoxContainer/PrioritySlider" to="." method="_on_priority_slider_value_changed"]

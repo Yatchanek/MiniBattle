@@ -1,0 +1,244 @@
+[gd_scene load_steps=15 format=3 uid="uid://bjgc248kiyw63"]
+
+[ext_resource type="PackedScene" uid="uid://brskasyjohrs" path="res://scenes/combat_unit.tscn" id="1_xarj2"]
+[ext_resource type="Script" path="res://scripts/ranged_unit.gd" id="2_oqd4h"]
+[ext_resource type="Resource" uid="uid://cpdkqark1as1k" path="res://resources/melee_unit.tres" id="3_60p5a"]
+[ext_resource type="Shader" path="res://resources/combat_unit.gdshader" id="4_g268m"]
+[ext_resource type="Texture2D" uid="uid://bwd38haopsna8" path="res://graphics/bow.png" id="4_v1rr1"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rvk1k"]
+resource_local_to_scene = true
+shader = ExtResource("4_g268m")
+shader_parameter/color = Color(0, 1, 0, 0)
+shader_parameter/width = 2.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xk7m8"]
+resource_local_to_scene = true
+size = Vector2(128, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cvglw"]
+resource_local_to_scene = true
+size = Vector2(5, 5)
+
+[sub_resource type="Animation" id="Animation_slm70"]
+resource_name = "Attack"
+length = 0.05
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pivot/Bow:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"launch_projectile"
+}, {
+"args": [],
+"method": &"prepare_to_attack"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_er7h4"]
+resource_name = "Idle"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pivot/Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 1), Vector2i(1, 1), Vector2i(2, 1), Vector2i(3, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pivot/Bow:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_kqkmu"]
+resource_name = "PrepareAttack"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pivot/Bow:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pivot/Bow:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"attack_target"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_hrlti"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pivot/Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pivot/Bow:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Pivot/Bow:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_i2pp7"]
+resource_name = "Walk"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pivot/Bow:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pivot/Sprite2D:frame_coords")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(4, 1), Vector2i(5, 1), Vector2i(6, 1), Vector2i(7, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bfyvm"]
+_data = {
+"Attack": SubResource("Animation_slm70"),
+"Idle": SubResource("Animation_er7h4"),
+"PrepareAttack": SubResource("Animation_kqkmu"),
+"RESET": SubResource("Animation_hrlti"),
+"Walk": SubResource("Animation_i2pp7")
+}
+
+[node name="Elf" instance=ExtResource("1_xarj2")]
+script = ExtResource("2_oqd4h")
+unit_data = ExtResource("3_60p5a")
+
+[node name="HealthBar" parent="." index="0"]
+offset_left = -10.0
+offset_top = -45.0
+offset_right = 10.0
+offset_bottom = -41.0
+
+[node name="LabelSpawnPosition" parent="." index="1"]
+position = Vector2(0, -56)
+
+[node name="ProjectileSpawnPosition" type="Marker2D" parent="Pivot" index="0"]
+position = Vector2(13, -17)
+
+[node name="Sprite2D" parent="Pivot" index="1"]
+material = SubResource("ShaderMaterial_rvk1k")
+frame = 8
+
+[node name="EnemyDetectorCollisionShape" parent="Pivot/EnemyDetector" index="0"]
+shape = SubResource("RectangleShape2D_xk7m8")
+
+[node name="FriendlyDetectorCollisionShape" parent="Pivot/FriendlyUnitDetector" index="0"]
+shape = SubResource("RectangleShape2D_cvglw")
+
+[node name="Bow" type="Sprite2D" parent="Pivot" index="4"]
+visible = false
+texture_filter = 1
+position = Vector2(12, -17)
+texture = ExtResource("4_v1rr1")
+hframes = 4
+
+[node name="AnimationPlayer" parent="." index="4"]
+libraries = {
+"": SubResource("AnimationLibrary_bfyvm")
+}

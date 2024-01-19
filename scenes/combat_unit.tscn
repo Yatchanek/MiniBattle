@@ -1,0 +1,80 @@
+[gd_scene load_steps=10 format=3 uid="uid://brskasyjohrs"]
+
+[ext_resource type="Script" path="res://scripts/combat_unit.gd" id="1_mm3aa"]
+[ext_resource type="Texture2D" uid="uid://3ba5tvls8g4k" path="res://graphics/progress_bar.png" id="3_l0ql8"]
+[ext_resource type="Texture2D" uid="uid://fomar8ka00vu" path="res://graphics/units_rev.png" id="4_6sxvr"]
+[ext_resource type="PackedScene" uid="uid://c31g36gcixmsw" path="res://scenes/unit_body.tscn" id="4_c4aib"]
+[ext_resource type="Shader" path="res://resources/combat_unit.gdshader" id="4_kybgs"]
+[ext_resource type="Script" path="res://scripts/progress_bar.gd" id="4_ypyg4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xnrm1"]
+resource_local_to_scene = true
+shader = ExtResource("4_kybgs")
+shader_parameter/color = Color(0, 1, 0, 0)
+shader_parameter/width = 2.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v7p7n"]
+resource_local_to_scene = true
+size = Vector2(128, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2yev6"]
+resource_local_to_scene = true
+size = Vector2(5, 5)
+
+[node name="CombatUnit" type="Node2D"]
+script = ExtResource("1_mm3aa")
+
+[node name="HealthBar" type="TextureProgressBar" parent="."]
+z_index = 1
+offset_left = -5.0
+offset_top = -24.0
+offset_right = 5.0
+offset_bottom = -22.0
+value = 50.0
+nine_patch_stretch = true
+texture_progress = ExtResource("3_l0ql8")
+tint_progress = Color(0, 0.901961, 0, 1)
+script = ExtResource("4_ypyg4")
+
+[node name="LabelSpawnPosition" type="Marker2D" parent="."]
+position = Vector2(0, -80)
+
+[node name="Body" parent="." node_paths=PackedStringArray("body_owner") instance=ExtResource("4_c4aib")]
+body_owner = NodePath("..")
+
+[node name="Pivot" type="Marker2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Pivot"]
+texture_filter = 1
+material = SubResource("ShaderMaterial_xnrm1")
+texture = ExtResource("4_6sxvr")
+offset = Vector2(0, -32)
+hframes = 8
+vframes = 6
+
+[node name="EnemyDetector" type="Area2D" parent="Pivot"]
+position = Vector2(64, -8)
+collision_layer = 0
+collision_mask = 3
+monitorable = false
+
+[node name="EnemyDetectorCollisionShape" type="CollisionShape2D" parent="Pivot/EnemyDetector"]
+shape = SubResource("RectangleShape2D_v7p7n")
+
+[node name="FriendlyUnitDetector" type="Area2D" parent="Pivot"]
+position = Vector2(32, -8)
+collision_layer = 0
+monitorable = false
+
+[node name="FriendlyDetectorCollisionShape" type="CollisionShape2D" parent="Pivot/FriendlyUnitDetector"]
+shape = SubResource("RectangleShape2D_2yev6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[connection signal="area_entered" from="Pivot/EnemyDetector" to="." method="_on_enemy_detector_area_entered"]
+[connection signal="area_exited" from="Pivot/EnemyDetector" to="." method="_on_enemy_detector_area_exited"]
+[connection signal="area_entered" from="Pivot/FriendlyUnitDetector" to="." method="_on_friendly_unit_detector_area_entered"]
+[connection signal="area_exited" from="Pivot/FriendlyUnitDetector" to="." method="_on_friendly_unit_detector_area_exited"]

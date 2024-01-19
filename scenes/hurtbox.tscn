@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://yp80m2mjlykn"]
+
+[ext_resource type="Script" path="res://scripts/hurtbox.gd" id="1_1pivv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfluy"]
+resource_local_to_scene = true
+size = Vector2(10, 12)
+
+[node name="Hurtbox" type="Area2D"]
+script = ExtResource("1_1pivv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_lfluy")

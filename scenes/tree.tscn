@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqsa00eabpjfh"]
+
+[ext_resource type="PackedScene" uid="uid://b7t6ts4vl2yv1" path="res://scenes/resource_area.tscn" id="1_84w3i"]
+[ext_resource type="Script" path="res://scripts/tree.gd" id="2_0hiph"]
+
+[node name="Tree" instance=ExtResource("1_84w3i")]
+script = ExtResource("2_0hiph")
+collision_half_width = 5
+collision_half_height = 5
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(0, 0)
+
+[node name="CollisionForNavigation" parent="Body" index="0"]
+position = Vector2(0, 18)
+polygon = PackedVector2Array(16, 15, 9, -54, -8, -54, -15, 15)
+
+[node name="Label" parent="." index="2"]
+offset_top = -51.0
+offset_bottom = -38.0

@@ -1,0 +1,112 @@
+[gd_scene load_steps=12 format=3 uid="uid://crfdgw1le4edp"]
+
+[ext_resource type="Texture2D" uid="uid://dfq662lrsg77t" path="res://graphics/unit_buttons.png" id="1_nniss"]
+[ext_resource type="Script" path="res://scripts/unit_purchase_button.gd" id="2_vyet5"]
+[ext_resource type="Texture2D" uid="uid://c05eub17y2pgp" path="res://graphics/cooldown_effect.png" id="3_nsrnx"]
+[ext_resource type="FontFile" uid="uid://5ppyd6notn34" path="res://fonts/m6x11 Daniel LInssen.ttf" id="4_3r71n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_of2wh"]
+resource_local_to_scene = true
+atlas = ExtResource("1_nniss")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pvutd"]
+resource_local_to_scene = true
+atlas = ExtResource("1_nniss")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_blvlu"]
+resource_local_to_scene = true
+atlas = ExtResource("1_nniss")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1twl"]
+resource_local_to_scene = true
+atlas = ExtResource("1_nniss")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4xw26"]
+resource_local_to_scene = true
+atlas = ExtResource("1_nniss")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x3fgg"]
+bg_color = Color(0.2, 0.2, 0.2, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_qgmtj"]
+line_spacing = 6.0
+font = ExtResource("4_3r71n")
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[node name="UnitPurchaseButton" type="TextureButton" groups=["BuyUnitButtons"]]
+texture_filter = 1
+custom_minimum_size = Vector2(48, 48)
+offset_right = 48.0
+offset_bottom = 48.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+texture_normal = SubResource("AtlasTexture_of2wh")
+texture_pressed = SubResource("AtlasTexture_pvutd")
+texture_hover = SubResource("AtlasTexture_blvlu")
+texture_disabled = SubResource("AtlasTexture_b1twl")
+texture_focused = SubResource("AtlasTexture_4xw26")
+script = ExtResource("2_vyet5")
+
+[node name="CooldownEffect" type="TextureProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+step = 0.05
+fill_mode = 5
+texture_progress = ExtResource("3_nsrnx")
+tint_progress = Color(1, 1, 1, 0.784314)
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -11.0
+offset_top = -51.0
+offset_right = 65.0
+offset_bottom = -3.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_x3fgg")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Wood: 100
+Stone: 100"
+label_settings = SubResource("LabelSettings_qgmtj")
+horizontal_alignment = 1
+vertical_alignment = 1

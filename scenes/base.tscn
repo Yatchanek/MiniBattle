@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://cbh4bhjtk70to"]
+
+[ext_resource type="Script" path="res://scripts/base.gd" id="1_q8qwm"]
+[ext_resource type="Texture2D" uid="uid://0titgkejj6yt" path="res://graphics/castle.png" id="2_bgvjn"]
+[ext_resource type="Texture2D" uid="uid://3ba5tvls8g4k" path="res://graphics/progress_bar.png" id="3_jh3jy"]
+[ext_resource type="PackedScene" uid="uid://c31g36gcixmsw" path="res://scenes/unit_body.tscn" id="4_km232"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gucoe"]
+resource_local_to_scene = true
+size = Vector2(25, 72)
+
+[node name="Base" type="Node2D"]
+script = ExtResource("1_q8qwm")
+max_hp = 500
+defense = 10
+
+[node name="Hitbox" parent="." node_paths=PackedStringArray("body_owner") instance=ExtResource("4_km232")]
+body_owner = NodePath("..")
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2(128.5, -36)
+shape = SubResource("RectangleShape2D_gucoe")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(74, 0)
+texture = ExtResource("2_bgvjn")
+offset = Vector2(0, -59)
+region_enabled = true
+region_rect = Rect2(0, 0, 148, 118)
+
+[node name="LabelSpawnPoint" type="Marker2D" parent="."]
+position = Vector2(83, -140)
+
+[node name="HealthBar" type="TextureProgressBar" parent="."]
+visible = false
+offset_top = -130.0
+offset_right = 148.0
+offset_bottom = -122.0
+value = 100.0
+allow_greater = true
+allow_lesser = true
+nine_patch_stretch = true
+texture_progress = ExtResource("3_jh3jy")
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
+
+[editable path="Hitbox"]

@@ -1,0 +1,732 @@
+[gd_scene load_steps=41 format=3 uid="uid://cmxchve5o1ki4"]
+
+[ext_resource type="Script" path="res://scripts/world.gd" id="1_cawhs"]
+[ext_resource type="PackedScene" uid="uid://vs5fsyc6l5wx" path="res://scenes/unit_spawner.tscn" id="2_2ncs0"]
+[ext_resource type="Texture2D" uid="uid://2e005sxbifs" path="res://graphics/background_layer_1.png" id="2_34016"]
+[ext_resource type="PackedScene" uid="uid://letal3lecv11" path="res://scenes/hud_new.tscn" id="2_kq37r"]
+[ext_resource type="Texture2D" uid="uid://b3sxsgyrj1img" path="res://graphics/background_layer_2.png" id="3_8b4bx"]
+[ext_resource type="Texture2D" uid="uid://d0nnxuxynmj3u" path="res://graphics/background_layer_3.png" id="4_arcm0"]
+[ext_resource type="PackedScene" uid="uid://cbh4bhjtk70to" path="res://scenes/base.tscn" id="5_2wmr3"]
+[ext_resource type="Texture2D" uid="uid://duf3sw74wfgac" path="res://graphics/oak_woods_tileset.png" id="7_mawnv"]
+[ext_resource type="Script" path="res://scripts/play_area.gd" id="7_wh25p"]
+[ext_resource type="Texture2D" uid="uid://dfq662lrsg77t" path="res://graphics/unit_buttons.png" id="10_0162y"]
+[ext_resource type="PackedScene" uid="uid://ca80fqmd6ad5r" path="res://scenes/vault.tscn" id="12_38uv6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ft6l"]
+resource_local_to_scene = true
+atlas = ExtResource("10_0162y")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjsrk"]
+resource_local_to_scene = true
+atlas = ExtResource("10_0162y")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_svx7a"]
+resource_local_to_scene = true
+atlas = ExtResource("10_0162y")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20t2v"]
+resource_local_to_scene = true
+atlas = ExtResource("10_0162y")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otmff"]
+resource_local_to_scene = true
+atlas = ExtResource("10_0162y")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tk0p3"]
+resource_local_to_scene = true
+atlas = ExtResource("10_0162y")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d1nia"]
+resource_local_to_scene = true
+atlas = ExtResource("10_0162y")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mafw8"]
+resource_local_to_scene = true
+atlas = ExtResource("10_0162y")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74xri"]
+resource_local_to_scene = true
+atlas = ExtResource("10_0162y")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqcwd"]
+resource_local_to_scene = true
+atlas = ExtResource("10_0162y")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6nrfe"]
+resource_local_to_scene = true
+atlas = ExtResource("10_0162y")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0efi"]
+resource_local_to_scene = true
+atlas = ExtResource("10_0162y")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8bu4"]
+resource_local_to_scene = true
+atlas = ExtResource("10_0162y")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pe7w1"]
+resource_local_to_scene = true
+atlas = ExtResource("10_0162y")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kesiv"]
+resource_local_to_scene = true
+atlas = ExtResource("10_0162y")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m7kxy"]
+resource_local_to_scene = true
+atlas = ExtResource("10_0162y")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4dkug"]
+resource_local_to_scene = true
+atlas = ExtResource("10_0162y")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3nk4"]
+resource_local_to_scene = true
+atlas = ExtResource("10_0162y")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mcwd2"]
+resource_local_to_scene = true
+atlas = ExtResource("10_0162y")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rn8bh"]
+resource_local_to_scene = true
+atlas = ExtResource("10_0162y")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kytol"]
+resource_local_to_scene = true
+atlas = ExtResource("10_0162y")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kucym"]
+resource_local_to_scene = true
+atlas = ExtResource("10_0162y")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_foq77"]
+resource_local_to_scene = true
+atlas = ExtResource("10_0162y")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gpcy0"]
+resource_local_to_scene = true
+atlas = ExtResource("10_0162y")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ee3a8"]
+resource_local_to_scene = true
+atlas = ExtResource("10_0162y")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_h83bp"]
+vertices = PackedVector2Array(1283, 715, 189, 715, 189, 381, 1283, 381)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(184, 376, 1288, 376, 1288, 720, 184, 720)])
+source_geometry_group_name = &"navigation_polygon_source_group"
+agent_radius = 5.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6nlel"]
+resource_local_to_scene = true
+size = Vector2(32, 72)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sobp5"]
+texture = ExtResource("7_mawnv")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+15:0/0 = 0
+16:0/0 = 0
+18:0/0 = 0
+19:0/0 = 0
+21:0/0 = 0
+22:0/0 = 0
+23:0/0 = 0
+24:0/0 = 0
+25:0/0 = 0
+26:0/0 = 0
+28:0/0 = 0
+29:0/0 = 0
+30:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+18:1/0 = 0
+19:1/0 = 0
+21:1/0 = 0
+22:1/0 = 0
+23:1/0 = 0
+24:1/0 = 0
+25:1/0 = 0
+26:1/0 = 0
+28:1/0 = 0
+29:1/0 = 0
+30:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+21:2/0 = 0
+22:2/0 = 0
+23:2/0 = 0
+25:2/0 = 0
+26:2/0 = 0
+28:2/0 = 0
+29:2/0 = 0
+30:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+15:3/0 = 0
+16:3/0 = 0
+21:3/0 = 0
+22:3/0 = 0
+25:3/0 = 0
+26:3/0 = 0
+28:3/0 = 0
+29:3/0 = 0
+30:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+17:4/0 = 0
+21:4/0 = 0
+22:4/0 = 0
+23:4/0 = 0
+24:4/0 = 0
+25:4/0 = 0
+26:4/0 = 0
+28:4/0 = 0
+29:4/0 = 0
+30:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+16:5/0 = 0
+17:5/0 = 0
+21:5/0 = 0
+22:5/0 = 0
+23:5/0 = 0
+24:5/0 = 0
+25:5/0 = 0
+26:5/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+15:6/0 = 0
+16:6/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+15:7/0 = 0
+16:7/0 = 0
+22:7/0 = 0
+23:7/0 = 0
+27:7/0 = 0
+28:7/0 = 0
+29:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+22:8/0 = 0
+23:8/0 = 0
+27:8/0 = 0
+28:8/0 = 0
+29:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+16:9/0 = 0
+18:9/0 = 0
+19:9/0 = 0
+20:9/0 = 0
+22:9/0 = 0
+23:9/0 = 0
+27:9/0 = 0
+28:9/0 = 0
+29:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+13:10/0 = 0
+14:10/0 = 0
+15:10/0 = 0
+16:10/0 = 0
+18:10/0 = 0
+19:10/0 = 0
+20:10/0 = 0
+22:10/0 = 0
+23:10/0 = 0
+27:10/0 = 0
+28:10/0 = 0
+29:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+13:11/0 = 0
+14:11/0 = 0
+15:11/0 = 0
+16:11/0 = 0
+27:11/0 = 0
+28:11/0 = 0
+29:11/0 = 0
+0:12/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+4:12/0 = 0
+5:12/0 = 0
+13:12/0 = 0
+14:12/0 = 0
+15:12/0 = 0
+16:12/0 = 0
+18:12/0 = 0
+19:12/0 = 0
+20:12/0 = 0
+22:12/0 = 0
+23:12/0 = 0
+24:12/0 = 0
+25:12/0 = 0
+27:12/0 = 0
+28:12/0 = 0
+29:12/0 = 0
+0:13/0 = 0
+1:13/0 = 0
+4:13/0 = 0
+5:13/0 = 0
+7:13/0 = 0
+8:13/0 = 0
+9:13/0 = 0
+10:13/0 = 0
+11:13/0 = 0
+13:13/0 = 0
+14:13/0 = 0
+15:13/0 = 0
+16:13/0 = 0
+18:13/0 = 0
+19:13/0 = 0
+20:13/0 = 0
+22:13/0 = 0
+23:13/0 = 0
+24:13/0 = 0
+25:13/0 = 0
+27:13/0 = 0
+28:13/0 = 0
+29:13/0 = 0
+7:14/0 = 0
+8:14/0 = 0
+9:14/0 = 0
+10:14/0 = 0
+11:14/0 = 0
+13:14/0 = 0
+14:14/0 = 0
+15:14/0 = 0
+16:14/0 = 0
+27:14/0 = 0
+28:14/0 = 0
+29:14/0 = 0
+0:15/0 = 0
+1:15/0 = 0
+2:15/0 = 0
+3:15/0 = 0
+4:15/0 = 0
+5:15/0 = 0
+13:15/0 = 0
+14:15/0 = 0
+15:15/0 = 0
+16:15/0 = 0
+18:15/0 = 0
+19:15/0 = 0
+20:15/0 = 0
+22:15/0 = 0
+23:15/0 = 0
+27:15/0 = 0
+28:15/0 = 0
+29:15/0 = 0
+0:16/0 = 0
+1:16/0 = 0
+2:16/0 = 0
+3:16/0 = 0
+4:16/0 = 0
+5:16/0 = 0
+7:16/0 = 0
+8:16/0 = 0
+9:16/0 = 0
+10:16/0 = 0
+11:16/0 = 0
+13:16/0 = 0
+14:16/0 = 0
+15:16/0 = 0
+16:16/0 = 0
+18:16/0 = 0
+19:16/0 = 0
+20:16/0 = 0
+22:16/0 = 0
+23:16/0 = 0
+27:16/0 = 0
+28:16/0 = 0
+29:16/0 = 0
+0:17/0 = 0
+1:17/0 = 0
+7:17/0 = 0
+8:17/0 = 0
+9:17/0 = 0
+10:17/0 = 0
+11:17/0 = 0
+22:17/0 = 0
+23:17/0 = 0
+27:17/0 = 0
+28:17/0 = 0
+29:17/0 = 0
+0:18/0 = 0
+1:18/0 = 0
+2:18/0 = 0
+3:18/0 = 0
+4:18/0 = 0
+5:18/0 = 0
+27:18/0 = 0
+28:18/0 = 0
+0:19/0 = 0
+1:19/0 = 0
+2:19/0 = 0
+3:19/0 = 0
+4:19/0 = 0
+5:19/0 = 0
+7:19/0 = 0
+8:19/0 = 0
+9:19/0 = 0
+10:19/0 = 0
+11:19/0 = 0
+12:19/0 = 0
+13:19/0 = 0
+14:19/0 = 0
+15:19/0 = 0
+16:19/0 = 0
+17:19/0 = 0
+18:19/0 = 0
+19:19/0 = 0
+20:19/0 = 0
+21:19/0 = 0
+22:19/0 = 0
+24:19/0 = 0
+25:19/0 = 0
+26:19/0 = 0
+27:19/0 = 0
+28:19/0 = 0
+29:19/0 = 0
+30:19/0 = 0
+0:20/0 = 0
+1:20/0 = 0
+2:20/0 = 0
+3:20/0 = 0
+4:20/0 = 0
+5:20/0 = 0
+7:20/0 = 0
+8:20/0 = 0
+9:20/0 = 0
+10:20/0 = 0
+11:20/0 = 0
+12:20/0 = 0
+13:20/0 = 0
+14:20/0 = 0
+15:20/0 = 0
+16:20/0 = 0
+17:20/0 = 0
+18:20/0 = 0
+19:20/0 = 0
+20:20/0 = 0
+21:20/0 = 0
+22:20/0 = 0
+24:20/0 = 0
+25:20/0 = 0
+26:20/0 = 0
+27:20/0 = 0
+28:20/0 = 0
+29:20/0 = 0
+30:20/0 = 0
+0:21/0 = 0
+1:21/0 = 0
+2:21/0 = 0
+7:21/0 = 0
+8:21/0 = 0
+9:21/0 = 0
+10:21/0 = 0
+11:21/0 = 0
+12:21/0 = 0
+13:21/0 = 0
+14:21/0 = 0
+15:21/0 = 0
+16:21/0 = 0
+17:21/0 = 0
+18:21/0 = 0
+19:21/0 = 0
+27:21/0 = 0
+28:21/0 = 0
+29:21/0 = 0
+30:21/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_co6m7"]
+sources/0 = SubResource("TileSetAtlasSource_sobp5")
+
+[node name="World" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_cawhs")
+
+[node name="HUD" parent="." instance=ExtResource("2_kq37r")]
+layer = 5
+
+[node name="Control" parent="HUD" index="0"]
+texture_filter = 1
+
+[node name="UnitPurchaseButton" parent="HUD/Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/Buttons" index="0"]
+texture_normal = SubResource("AtlasTexture_7ft6l")
+texture_pressed = SubResource("AtlasTexture_xjsrk")
+texture_hover = SubResource("AtlasTexture_svx7a")
+texture_disabled = SubResource("AtlasTexture_20t2v")
+texture_focused = SubResource("AtlasTexture_otmff")
+
+[node name="UnitPurchaseButton2" parent="HUD/Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/Buttons" index="1"]
+texture_normal = SubResource("AtlasTexture_tk0p3")
+texture_pressed = SubResource("AtlasTexture_d1nia")
+texture_hover = SubResource("AtlasTexture_mafw8")
+texture_disabled = SubResource("AtlasTexture_74xri")
+texture_focused = SubResource("AtlasTexture_bqcwd")
+
+[node name="UnitPurchaseButton5" parent="HUD/Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/Buttons" index="2"]
+texture_normal = SubResource("AtlasTexture_6nrfe")
+texture_pressed = SubResource("AtlasTexture_p0efi")
+texture_hover = SubResource("AtlasTexture_h8bu4")
+texture_disabled = SubResource("AtlasTexture_pe7w1")
+texture_focused = SubResource("AtlasTexture_kesiv")
+
+[node name="UnitPurchaseButton3" parent="HUD/Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/Buttons" index="3"]
+texture_normal = SubResource("AtlasTexture_m7kxy")
+texture_pressed = SubResource("AtlasTexture_4dkug")
+texture_hover = SubResource("AtlasTexture_n3nk4")
+texture_disabled = SubResource("AtlasTexture_mcwd2")
+texture_focused = SubResource("AtlasTexture_rn8bh")
+unit_type = 3
+
+[node name="UnitPurchaseButton6" parent="HUD/Control/Panel/MarginContainer/VBoxContainer/VBoxContainer/Buttons" index="4"]
+texture_normal = SubResource("AtlasTexture_kytol")
+texture_pressed = SubResource("AtlasTexture_kucym")
+texture_hover = SubResource("AtlasTexture_foq77")
+texture_disabled = SubResource("AtlasTexture_gpcy0")
+texture_focused = SubResource("AtlasTexture_ee3a8")
+unit_type = 4
+
+[node name="BackgroundLayer1" type="Sprite2D" parent="."]
+z_index = -100
+texture_filter = 1
+position = Vector2(192, 0)
+scale = Vector2(2, 2)
+texture = ExtResource("2_34016")
+centered = false
+
+[node name="BackgroundLayer2" type="Sprite2D" parent="."]
+z_index = -100
+texture_filter = 1
+position = Vector2(192, 0)
+scale = Vector2(2, 2)
+texture = ExtResource("3_8b4bx")
+centered = false
+
+[node name="BackgroundLayer3" type="Sprite2D" parent="."]
+z_index = -100
+texture_filter = 1
+position = Vector2(192, 0)
+scale = Vector2(2, 2)
+texture = ExtResource("4_arcm0")
+centered = false
+
+[node name="BackgroundLayer4" type="Sprite2D" parent="."]
+z_index = -100
+texture_filter = 1
+position = Vector2(832, 0)
+scale = Vector2(2, 2)
+texture = ExtResource("2_34016")
+centered = false
+
+[node name="BackgroundLayer5" type="Sprite2D" parent="."]
+z_index = -100
+texture_filter = 1
+position = Vector2(832, 0)
+scale = Vector2(2, 2)
+texture = ExtResource("3_8b4bx")
+centered = false
+
+[node name="BackgroundLayer6" type="Sprite2D" parent="."]
+z_index = -100
+texture_filter = 1
+position = Vector2(832, 0)
+scale = Vector2(2, 2)
+texture = ExtResource("4_arcm0")
+centered = false
+
+[node name="PlayArea" type="Node2D" parent="."]
+y_sort_enabled = true
+script = ExtResource("7_wh25p")
+resource_grid_start_left = Vector2i(350, 450)
+grid_size = 80
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="PlayArea"]
+navigation_polygon = SubResource("NavigationPolygon_h83bp")
+
+[node name="BlueBase" parent="PlayArea" instance=ExtResource("5_2wmr3")]
+unique_name_in_owner = true
+position = Vector2(192, 352)
+
+[node name="CollisionShape2D" parent="PlayArea/BlueBase/Hitbox" index="0"]
+shape = SubResource("RectangleShape2D_6nlel")
+
+[node name="RedBase" parent="PlayArea" instance=ExtResource("5_2wmr3")]
+unique_name_in_owner = true
+position = Vector2(1280, 352)
+rotation = 3.14159
+scale = Vector2(1, -1)
+team = 1
+
+[node name="BlueSpawner" parent="PlayArea" instance=ExtResource("2_2ncs0")]
+position = Vector2(234, 352)
+spawn_interval = 5.0
+
+[node name="CombatUnitSpawnPoint" parent="PlayArea/BlueSpawner" index="0"]
+position = Vector2(38, 0)
+
+[node name="GathererUnitSpawnPoint" parent="PlayArea/BlueSpawner" index="1"]
+position = Vector2(54, 96)
+
+[node name="RedSpawner" parent="PlayArea" instance=ExtResource("2_2ncs0")]
+position = Vector2(1241, 350)
+team = 1
+
+[node name="CombatUnitSpawnPoint" parent="PlayArea/RedSpawner" index="0"]
+position = Vector2(-41, 2)
+
+[node name="GathererUnitSpawnPoint" parent="PlayArea/RedSpawner" index="1"]
+position = Vector2(-57, 98)
+
+[node name="TileMap" type="TileMap" parent="PlayArea"]
+texture_filter = 1
+tile_set = SubResource("TileSet_co6m7")
+format = 2
+layer_0/tile_data = PackedInt32Array(1441792, 196608, 0, 1507328, 196608, 5, 1441793, 65536, 0, 1507329, 65536, 5, 1441794, 65536, 0, 1507330, 65536, 5, 1441795, 65536, 0, 1507331, 65536, 5, 1441796, 65536, 0, 1507332, 65536, 5, 1441797, 65536, 0, 1507333, 65536, 5, 1441798, 65536, 0, 1507334, 65536, 5, 1441799, 65536, 0, 1507335, 65536, 5, 1441800, 65536, 0, 1507336, 65536, 5, 1441801, 65536, 0, 1507337, 65536, 5, 1441802, 65536, 0, 1507338, 65536, 5, 1441803, 65536, 0, 1507339, 65536, 5, 1441804, 65536, 0, 1507340, 65536, 5, 1441805, 65536, 0, 1507341, 65536, 5, 1441806, 65536, 0, 1507342, 65536, 5, 1441807, 65536, 0, 1507343, 65536, 5, 1441808, 65536, 0, 1507344, 65536, 5, 1441809, 65536, 0, 1507345, 65536, 5, 1441810, 65536, 0, 1507346, 65536, 5, 1441811, 65536, 0, 1507347, 65536, 5, 1441812, 65536, 0, 1507348, 65536, 5, 1441813, 65536, 0, 1507349, 65536, 5, 1441814, 65536, 0, 1507350, 65536, 5, 1441815, 65536, 0, 1507351, 65536, 5, 1441816, 65536, 0, 1507352, 65536, 5, 1441817, 65536, 0, 1507353, 65536, 5, 1441818, 65536, 0, 1507354, 65536, 5, 1441819, 65536, 0, 1507355, 65536, 5, 1441820, 65536, 0, 1507356, 65536, 5, 1441821, 65536, 0, 1507357, 65536, 5, 1441822, 65536, 0, 1507358, 65536, 5, 1441823, 65536, 0, 1507359, 65536, 5, 1441824, 65536, 0, 1507360, 65536, 5, 1441825, 65536, 0, 1507361, 65536, 5, 1441826, 65536, 0, 1507362, 65536, 5, 1441827, 65536, 0, 1507363, 65536, 5, 1441828, 65536, 0, 1507364, 65536, 5, 1441829, 65536, 0, 1507365, 65536, 5, 1441830, 65536, 0, 1507366, 65536, 5, 1441831, 65536, 0, 1507367, 65536, 5, 1441832, 65536, 0, 1507368, 65536, 5, 1441833, 65536, 0, 1507369, 65536, 5, 1441834, 65536, 0, 1507370, 65536, 5, 1441835, 65536, 0, 1507371, 65536, 5, 1441836, 65536, 0, 1507372, 65536, 5, 1441837, 65536, 0, 1507373, 65536, 5, 1441838, 65536, 0, 1507374, 65536, 5, 1441839, 65536, 0, 1507375, 65536, 5, 1441840, 65536, 0, 1507376, 65536, 5, 1441841, 65536, 0, 1507377, 65536, 5, 1441842, 65536, 0, 1507378, 65536, 5, 1441843, 65536, 0, 1507379, 65536, 5, 1441844, 65536, 0, 1507380, 65536, 5, 1441845, 65536, 0, 1507381, 65536, 5, 1441846, 65536, 0, 1507382, 65536, 5, 1441847, 65536, 0, 1507383, 65536, 5, 1441848, 65536, 0, 1507384, 65536, 5, 1441849, 65536, 0, 1507385, 65536, 5, 1441850, 65536, 0, 1507386, 65536, 5, 1441851, 65536, 0, 1507387, 65536, 5, 1441852, 65536, 0, 1507388, 65536, 5, 1441853, 65536, 0, 1507389, 65536, 5, 1441854, 65536, 0, 1507390, 65536, 5, 1441855, 65536, 0, 1507391, 65536, 5, 1441856, 65536, 0, 1507392, 65536, 5, 1441857, 65536, 0, 1507393, 65536, 5, 1441858, 65536, 0, 1507394, 65536, 5, 1441859, 65536, 0, 1507395, 65536, 5, 1441860, 65536, 0, 1507396, 65536, 5, 1441861, 65536, 0, 1507397, 65536, 5, 1441862, 65536, 0, 1507398, 65536, 5, 1441863, 65536, 0, 1507399, 65536, 5, 1441864, 65536, 0, 1507400, 65536, 5, 1441865, 65536, 0, 1507401, 65536, 5, 1441866, 65536, 0, 1507402, 65536, 5, 1441867, 65536, 0, 1507403, 65536, 5, 1441868, 65536, 0, 1507404, 65536, 5, 1441869, 65536, 0, 1507405, 65536, 5, 1441870, 65536, 0, 1507406, 65536, 5, 1441871, 65536, 0, 1507407, 196608, 5, 1441885, 65536, 0, 1507421, 196608, 5, 1441872, 65536, 0, 1441873, 65536, 0, 1441874, 65536, 0, 1441875, 65536, 0, 1441876, 65536, 0, 1441877, 65536, 0, 1441878, 65536, 0, 1441879, 65536, 0, 1441880, 65536, 0, 1441881, 65536, 0, 1441882, 65536, 0, 1441883, 65536, 0, 1441884, 65536, 0, 1441886, 65536, 0, 1441887, 65536, 0, 1441888, 65536, 0, 1441889, 65536, 0, 1441890, 65536, 0, 1441891, 65536, 0, 1441892, 65536, 0, 1441893, 65536, 0, 1441894, 65536, 0, 1441895, 65536, 0, 1441896, 65536, 0, 1441897, 65536, 0, 1441898, 65536, 0, 1441899, 65536, 0, 1441900, 65536, 0, 1507408, 196608, 5, 1507409, 196608, 5, 1507410, 196608, 5, 1507411, 196608, 5, 1507412, 196608, 5, 1507413, 196608, 5, 1507414, 196608, 5, 1507415, 196608, 5, 1507416, 196608, 5, 1507417, 196608, 5, 1507418, 196608, 5, 1507419, 196608, 5, 1507420, 196608, 5, 1507422, 196608, 5, 1507423, 196608, 5, 1507424, 196608, 5, 1507425, 196608, 5, 1507426, 196608, 5, 1507427, 196608, 5, 1507428, 196608, 5, 1507429, 196608, 5, 1507430, 196608, 5, 1507431, 196608, 5, 1507432, 196608, 5, 1507433, 196608, 5, 1507434, 196608, 5, 1507435, 196608, 5, 1507436, 196608, 5)
+
+[node name="BlueVault" parent="PlayArea" instance=ExtResource("12_38uv6")]
+unique_name_in_owner = true
+texture_filter = 1
+position = Vector2(230, 512)
+
+[node name="RedVault" parent="PlayArea" instance=ExtResource("12_38uv6")]
+unique_name_in_owner = true
+texture_filter = 1
+position = Vector2(1240, 512)
+team = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+z_index = -5
+offset_top = 384.0
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+color = Color(0.168627, 0.168627, 0.168627, 1)
+
+[connection signal="hit" from="PlayArea/BlueBase" to="PlayArea" method="_on_unit_hit"]
+[connection signal="hit" from="PlayArea/RedBase" to="PlayArea" method="_on_unit_hit"]
+
+[editable path="HUD"]
+[editable path="PlayArea/BlueBase"]
+[editable path="PlayArea/BlueBase/Hitbox"]
+[editable path="PlayArea/BlueSpawner"]
+[editable path="PlayArea/RedSpawner"]

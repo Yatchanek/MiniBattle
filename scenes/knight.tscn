@@ -1,0 +1,346 @@
+[gd_scene load_steps=17 format=3 uid="uid://xevf7lglj5el"]
+
+[ext_resource type="PackedScene" uid="uid://brskasyjohrs" path="res://scenes/combat_unit.tscn" id="1_n2ikc"]
+[ext_resource type="Script" path="res://scripts/melee_unit.gd" id="2_arbod"]
+[ext_resource type="Resource" uid="uid://cpdkqark1as1k" path="res://resources/melee_unit.tres" id="3_vsqmg"]
+[ext_resource type="Texture2D" uid="uid://dj1hthu1us7b1" path="res://graphics/weapon.png" id="4_f2tbw"]
+[ext_resource type="Shader" path="res://resources/combat_unit.gdshader" id="4_x1ayk"]
+[ext_resource type="PackedScene" uid="uid://yp80m2mjlykn" path="res://scenes/hurtbox.tscn" id="6_v4vow"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dlcoa"]
+resource_local_to_scene = true
+shader = ExtResource("4_x1ayk")
+shader_parameter/color = Color(0, 1, 0, 0)
+shader_parameter/width = 2.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y3uok"]
+resource_local_to_scene = true
+size = Vector2(5, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2kjx3"]
+resource_local_to_scene = true
+size = Vector2(14, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ivt2j"]
+resource_local_to_scene = true
+size = Vector2(5, 5)
+
+[sub_resource type="Animation" id="Animation_152c2"]
+resource_name = "Attack"
+length = 0.1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pivot/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pivot/Weapon:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Pivot/Weapon:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-1.0472, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pivot/Weapon/Hurtbox/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"prepare_to_attack"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_pqgag"]
+resource_name = "Idle"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pivot/Weapon:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pivot/Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_hctdu"]
+resource_name = "PrepareAttack"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pivot/Weapon:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(2, 0.5),
+"update": 0,
+"values": [0.0, -1.0472]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pivot/Weapon/Hurtbox/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Pivot/Weapon:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pivot/Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"attack_target"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_glsnw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pivot/Weapon:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.785398]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pivot/Weapon/Hurtbox/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Pivot/Sprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pivot/Weapon:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_hd6x8"]
+resource_name = "Walk"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pivot/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [4, 5, 6, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pivot/Weapon:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Pivot/Weapon/Hurtbox/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vbilj"]
+_data = {
+"Attack": SubResource("Animation_152c2"),
+"Idle": SubResource("Animation_pqgag"),
+"PrepareAttack": SubResource("Animation_hctdu"),
+"RESET": SubResource("Animation_glsnw"),
+"Walk": SubResource("Animation_hd6x8")
+}
+
+[node name="Knight" instance=ExtResource("1_n2ikc")]
+script = ExtResource("2_arbod")
+unit_data = ExtResource("3_vsqmg")
+
+[node name="HealthBar" parent="." index="0"]
+offset_left = -10.0
+offset_top = -46.0
+offset_right = 10.0
+offset_bottom = -42.0
+
+[node name="LabelSpawnPosition" parent="." index="1"]
+position = Vector2(0, -56)
+
+[node name="Sprite2D" parent="Pivot" index="0"]
+material = SubResource("ShaderMaterial_dlcoa")
+
+[node name="EnemyDetector" parent="Pivot" index="1"]
+position = Vector2(64, -11)
+
+[node name="EnemyDetectorCollisionShape" parent="Pivot/EnemyDetector" index="0"]
+shape = SubResource("RectangleShape2D_y3uok")
+
+[node name="Weapon" type="Sprite2D" parent="Pivot" index="2"]
+visible = false
+texture_filter = 1
+position = Vector2(12, -9)
+rotation = -0.785398
+texture = ExtResource("4_f2tbw")
+offset = Vector2(22, 0)
+region_enabled = true
+region_rect = Rect2(0, 0, 60, 24)
+
+[node name="Hurtbox" parent="Pivot/Weapon" index="0" node_paths=PackedStringArray("attacker") instance=ExtResource("6_v4vow")]
+position = Vector2(35, 0)
+attacker = NodePath("../../..")
+
+[node name="CollisionShape2D" parent="Pivot/Weapon/Hurtbox" index="0"]
+position = Vector2(-8, 0)
+shape = SubResource("RectangleShape2D_2kjx3")
+disabled = true
+
+[node name="FriendlyUnitDetector" parent="Pivot" index="3"]
+position = Vector2(32, -11)
+
+[node name="FriendlyDetectorCollisionShape" parent="Pivot/FriendlyUnitDetector" index="0"]
+shape = SubResource("RectangleShape2D_ivt2j")
+
+[node name="AnimationPlayer" parent="." index="4"]
+libraries = {
+"": SubResource("AnimationLibrary_vbilj")
+}
+
+[editable path="Pivot/Weapon/Hurtbox"]

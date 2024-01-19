@@ -1,0 +1,356 @@
+[gd_scene load_steps=38 format=3 uid="uid://us4nipfkgx8q"]
+
+[ext_resource type="Script" path="res://scripts/HUD.gd" id="1_f3b6g"]
+[ext_resource type="FontFile" uid="uid://dhwruotnoya7e" path="res://fonts/Teko-Bold.ttf" id="2_ub5lq"]
+[ext_resource type="Texture2D" uid="uid://dfq662lrsg77t" path="res://graphics/unit_buttons.png" id="4_8cvy1"]
+[ext_resource type="PackedScene" uid="uid://d10fffaxouuhj" path="res://scenes/expandable_menu.tscn" id="5_4gyuw"]
+[ext_resource type="FontFile" uid="uid://5ppyd6notn34" path="res://fonts/m6x11 Daniel LInssen.ttf" id="5_pps2d"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_uknq5"]
+font = ExtResource("2_ub5lq")
+font_size = 32
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vw833"]
+resource_local_to_scene = true
+atlas = ExtResource("4_8cvy1")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wv4hy"]
+resource_local_to_scene = true
+atlas = ExtResource("4_8cvy1")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1swcm"]
+resource_local_to_scene = true
+atlas = ExtResource("4_8cvy1")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w67xc"]
+resource_local_to_scene = true
+atlas = ExtResource("4_8cvy1")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jphi7"]
+resource_local_to_scene = true
+atlas = ExtResource("4_8cvy1")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u76cm"]
+resource_local_to_scene = true
+atlas = ExtResource("4_8cvy1")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ai2hj"]
+resource_local_to_scene = true
+atlas = ExtResource("4_8cvy1")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0x4mn"]
+resource_local_to_scene = true
+atlas = ExtResource("4_8cvy1")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8lcaj"]
+resource_local_to_scene = true
+atlas = ExtResource("4_8cvy1")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_32pfg"]
+resource_local_to_scene = true
+atlas = ExtResource("4_8cvy1")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lp60a"]
+resource_local_to_scene = true
+atlas = ExtResource("4_8cvy1")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oqk0c"]
+resource_local_to_scene = true
+atlas = ExtResource("4_8cvy1")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tbkae"]
+resource_local_to_scene = true
+atlas = ExtResource("4_8cvy1")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4lql0"]
+resource_local_to_scene = true
+atlas = ExtResource("4_8cvy1")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfk7s"]
+resource_local_to_scene = true
+atlas = ExtResource("4_8cvy1")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6mj4"]
+resource_local_to_scene = true
+atlas = ExtResource("4_8cvy1")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2xpks"]
+resource_local_to_scene = true
+atlas = ExtResource("4_8cvy1")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nud4r"]
+resource_local_to_scene = true
+atlas = ExtResource("4_8cvy1")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ihlbk"]
+resource_local_to_scene = true
+atlas = ExtResource("4_8cvy1")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jmv8e"]
+resource_local_to_scene = true
+atlas = ExtResource("4_8cvy1")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cr74w"]
+resource_local_to_scene = true
+atlas = ExtResource("4_8cvy1")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74a32"]
+resource_local_to_scene = true
+atlas = ExtResource("4_8cvy1")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8523k"]
+resource_local_to_scene = true
+atlas = ExtResource("4_8cvy1")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jcwyc"]
+resource_local_to_scene = true
+atlas = ExtResource("4_8cvy1")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vg7mg"]
+resource_local_to_scene = true
+atlas = ExtResource("4_8cvy1")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ygdut"]
+resource_local_to_scene = true
+atlas = ExtResource("4_8cvy1")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lwqce"]
+resource_local_to_scene = true
+atlas = ExtResource("4_8cvy1")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6wgg8"]
+resource_local_to_scene = true
+atlas = ExtResource("4_8cvy1")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qkxea"]
+resource_local_to_scene = true
+atlas = ExtResource("4_8cvy1")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f0cdv"]
+resource_local_to_scene = true
+atlas = ExtResource("4_8cvy1")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="LabelSettings" id="LabelSettings_f8wvk"]
+font = ExtResource("5_pps2d")
+font_size = 32
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 0
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_f3b6g")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="BlueTeamScore" type="Label" parent="Control/HBoxContainer"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_uknq5")
+horizontal_alignment = 2
+
+[node name="Label2" type="Label" parent="Control/HBoxContainer"]
+layout_mode = 2
+text = ":"
+label_settings = SubResource("LabelSettings_uknq5")
+
+[node name="RedTeamScore" type="Label" parent="Control/HBoxContainer"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_uknq5")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+offset_right = 365.0
+offset_bottom = 53.0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 96
+theme_override_constants/margin_bottom = 5
+
+[node name="ExpandableButtons" parent="Control/MarginContainer" instance=ExtResource("5_4gyuw")]
+layout_mode = 2
+
+[node name="UnitPurchaseButton" parent="Control/MarginContainer/ExpandableButtons/ExpandableMenu/Buttons" index="0"]
+texture_normal = SubResource("AtlasTexture_vw833")
+texture_pressed = SubResource("AtlasTexture_wv4hy")
+texture_hover = SubResource("AtlasTexture_1swcm")
+texture_disabled = SubResource("AtlasTexture_w67xc")
+texture_focused = SubResource("AtlasTexture_jphi7")
+
+[node name="UnitPurchaseButton2" parent="Control/MarginContainer/ExpandableButtons/ExpandableMenu/Buttons" index="1"]
+texture_normal = SubResource("AtlasTexture_u76cm")
+texture_pressed = SubResource("AtlasTexture_ai2hj")
+texture_hover = SubResource("AtlasTexture_0x4mn")
+texture_disabled = SubResource("AtlasTexture_8lcaj")
+texture_focused = SubResource("AtlasTexture_32pfg")
+
+[node name="UnitPurchaseButton5" parent="Control/MarginContainer/ExpandableButtons/ExpandableMenu/Buttons" index="2"]
+texture_normal = SubResource("AtlasTexture_lp60a")
+texture_pressed = SubResource("AtlasTexture_oqk0c")
+texture_hover = SubResource("AtlasTexture_tbkae")
+texture_disabled = SubResource("AtlasTexture_4lql0")
+texture_focused = SubResource("AtlasTexture_tfk7s")
+
+[node name="UnitPurchaseButton3" parent="Control/MarginContainer/ExpandableButtons/ExpandableMenu/Buttons" index="3"]
+texture_normal = SubResource("AtlasTexture_q6mj4")
+texture_pressed = SubResource("AtlasTexture_2xpks")
+texture_hover = SubResource("AtlasTexture_nud4r")
+texture_disabled = SubResource("AtlasTexture_ihlbk")
+texture_focused = SubResource("AtlasTexture_jmv8e")
+
+[node name="UnitPurchaseButton4" parent="Control/MarginContainer/ExpandableButtons/ExpandableMenu/Buttons" index="4"]
+texture_normal = SubResource("AtlasTexture_cr74w")
+texture_pressed = SubResource("AtlasTexture_74a32")
+texture_hover = SubResource("AtlasTexture_8523k")
+texture_disabled = SubResource("AtlasTexture_jcwyc")
+texture_focused = SubResource("AtlasTexture_vg7mg")
+
+[node name="UnitPurchaseButton6" parent="Control/MarginContainer/ExpandableButtons/ExpandableMenu/Buttons" index="5"]
+texture_normal = SubResource("AtlasTexture_ygdut")
+texture_pressed = SubResource("AtlasTexture_lwqce")
+texture_hover = SubResource("AtlasTexture_6wgg8")
+texture_disabled = SubResource("AtlasTexture_qkxea")
+texture_focused = SubResource("AtlasTexture_f0cdv")
+
+[node name="ResourceCounters" type="Control" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PlayerResources" type="MarginContainer" parent="Control/ResourceCounters"]
+layout_mode = 0
+offset_right = 61.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+
+[node name="PlayerResourceCount" type="VBoxContainer" parent="Control/ResourceCounters/PlayerResources"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Wood" type="HBoxContainer" parent="Control/ResourceCounters/PlayerResources/PlayerResourceCount"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/ResourceCounters/PlayerResources/PlayerResourceCount/Wood"]
+custom_minimum_size = Vector2(45, 0)
+layout_mode = 2
+text = "Wood:"
+label_settings = SubResource("LabelSettings_f8wvk")
+
+[node name="WoodLabel" type="Label" parent="Control/ResourceCounters/PlayerResources/PlayerResourceCount/Wood"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_f8wvk")
+
+[node name="Stone" type="HBoxContainer" parent="Control/ResourceCounters/PlayerResources/PlayerResourceCount"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/ResourceCounters/PlayerResources/PlayerResourceCount/Stone"]
+custom_minimum_size = Vector2(45, 0)
+layout_mode = 2
+text = "Stone:"
+label_settings = SubResource("LabelSettings_f8wvk")
+
+[node name="StoneLabel" type="Label" parent="Control/ResourceCounters/PlayerResources/PlayerResourceCount/Stone"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_f8wvk")
+
+[node name="AIResources" type="MarginContainer" parent="Control/ResourceCounters"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -61.0
+offset_bottom = 36.0
+grow_horizontal = 0
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+
+[node name="AIResourceCount" type="VBoxContainer" parent="Control/ResourceCounters/AIResources"]
+custom_minimum_size = Vector2(92, 0)
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Wood" type="HBoxContainer" parent="Control/ResourceCounters/AIResources/AIResourceCount"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/ResourceCounters/AIResources/AIResourceCount/Wood"]
+custom_minimum_size = Vector2(45, 0)
+layout_mode = 2
+text = "Wood:"
+label_settings = SubResource("LabelSettings_f8wvk")
+
+[node name="WoodLabel" type="Label" parent="Control/ResourceCounters/AIResources/AIResourceCount/Wood"]
+layout_mode = 2
+text = "999999"
+label_settings = SubResource("LabelSettings_f8wvk")
+
+[node name="Stone" type="HBoxContainer" parent="Control/ResourceCounters/AIResources/AIResourceCount"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/ResourceCounters/AIResources/AIResourceCount/Stone"]
+custom_minimum_size = Vector2(45, 0)
+layout_mode = 2
+text = "Stone:"
+label_settings = SubResource("LabelSettings_f8wvk")
+
+[node name="StoneLabel" type="Label" parent="Control/ResourceCounters/AIResources/AIResourceCount/Stone"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_f8wvk")
+
+[editable path="Control/MarginContainer/ExpandableButtons"]

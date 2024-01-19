@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="UnitData" load_steps=2 format=3 uid="uid://cpdkqark1as1k"]
+
+[ext_resource type="Script" path="res://scripts/unit_data.gd" id="1_nxpi4"]
+
+[resource]
+script = ExtResource("1_nxpi4")
+base_max_hp = 50
+move_speed = 48
+unit_type = 1
+base_attack_power = 20
+base_attack_charge_duration = 0.75
+base_crit_chance = 0.01
+base_defense = 10
+base_evasion = 0.1
+deviation = 0.15
+attack_range = 40
+proximity_range = 12
+sprite_width = 20
+max_capacity = 0
+work_speed = 0.0
+forage_efficiency = 0
+unload_efficiency = 0

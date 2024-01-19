@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="UnitData" load_steps=2 format=3 uid="uid://dbtdenxmr3kof"]
+
+[ext_resource type="Script" path="res://scripts/unit_data.gd" id="1_ds4m5"]
+
+[resource]
+script = ExtResource("1_ds4m5")
+max_hp = 0
+move_speed = 56
+attack = 0
+attack_speed = 0.0
+defence = 0
+evasion = 0
+deviation = 0.0
+attack_range = 0
+proximity_range = 0
+sprite_width = 0
+max_capacity = 150
+forage_type = 1
+work_speed = 0.5
+forage_efficiency = 30
+unload_efficiency = 50

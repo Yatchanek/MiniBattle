@@ -1,0 +1,48 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Battler"
+run/main_scene="res://scenes/world.tscn"
+config/features=PackedStringArray("4.2", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[autoload]
+
+Globals="*res://scripts/globals.gd"
+GlobalTimer="*res://scenes/global_timer.tscn"
+AIControler="*res://scripts/ai_controler.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="viewport"
+
+[layer_names]
+
+2d_physics/layer_1="Blue Team Units"
+2d_physics/layer_2="Red Team Units"
+2d_physics/layer_3="Blue Team Attacks"
+2d_physics/layer_4="Red Team Attacks"
+2d_physics/layer_5="ForagingTools"
+2d_physics/layer_6="Resources"
+2d_physics/layer_7="Blue Vault"
+2d_physics/layer_8="Red Vault"
+2d_physics/layer_9="Blue Base"
+2d_physics/layer_10="Red Base"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

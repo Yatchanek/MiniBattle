@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://2bxoqjvliwk0"]
+
+[ext_resource type="FontFile" uid="uid://5ppyd6notn34" path="res://fonts/m6x11 Daniel LInssen.ttf" id="1_j4ueo"]
+[ext_resource type="Script" path="res://scripts/hit_label.gd" id="2_owe5u"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ecd0h"]
+resource_local_to_scene = true
+font = ExtResource("1_j4ueo")
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
+[node name="HitLabel" type="Label"]
+texture_filter = 1
+offset_left = -16.0
+offset_top = -8.0
+offset_right = 16.0
+offset_bottom = 6.0
+text = "Miss!"
+label_settings = SubResource("LabelSettings_ecd0h")
+script = ExtResource("2_owe5u")

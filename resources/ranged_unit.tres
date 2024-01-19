@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="UnitData" load_steps=2 format=3 uid="uid://cxkbxfrx56sma"]
+
+[ext_resource type="Script" path="res://scripts/unit_data.gd" id="1_8ottj"]
+
+[resource]
+script = ExtResource("1_8ottj")
+base_max_hp = 35
+move_speed = 36
+unit_type = 0
+base_attack_power = 18
+base_attack_charge_duration = 1.0
+base_crit_chance = 0.015
+base_defense = 6
+base_evasion = 0.15
+deviation = 0.1
+attack_range = 128
+proximity_range = 20
+sprite_width = 24
+max_capacity = 0
+work_speed = 0.0
+forage_efficiency = 0
+unload_efficiency = 0

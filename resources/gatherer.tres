@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="UnitData" load_steps=2 format=3 uid="uid://c4013ae71dljo"]
+
+[ext_resource type="Script" path="res://scripts/unit_data.gd" id="1_wgepd"]
+
+[resource]
+script = ExtResource("1_wgepd")
+base_max_hp = 25
+move_speed = 64
+unit_type = 3
+base_attack_power = 0
+base_attack_charge_duration = 0.0
+base_crit_chance = 0.0
+base_defense = 3
+base_evasion = 0.05
+deviation = 0.0
+attack_range = 0
+proximity_range = 0
+sprite_width = 0
+max_capacity = 100
+work_speed = 0.5
+forage_efficiency = 20
+unload_efficiency = 25

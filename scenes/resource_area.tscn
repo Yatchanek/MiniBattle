@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7t6ts4vl2yv1"]
+
+[ext_resource type="Script" path="res://scripts/resource_area.gd" id="1_ybsiy"]
+[ext_resource type="Texture2D" uid="uid://clncih5nk4d76" path="res://graphics/tree by colorful lungs.png" id="2_77qyi"]
+[ext_resource type="FontFile" uid="uid://bxtp7t53h0pad" path="res://fonts/m5x7 Daniel Linssen.ttf" id="3_lqfic"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_us8cn"]
+line_spacing = 0.0
+font = ExtResource("3_lqfic")
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[node name="ResourceSite" type="Node2D"]
+script = ExtResource("1_ybsiy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -19)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_77qyi")
+
+[node name="Body" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 16
+
+[node name="CollisionForNavigation" type="CollisionPolygon2D" parent="Body"]
+polygon = PackedVector2Array(-8, -9, 12, -9, 12, -31, -8, -31)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -20.0
+offset_top = -47.0
+offset_right = 21.0
+offset_bottom = -34.0
+text = "10000"
+label_settings = SubResource("LabelSettings_us8cn")
+horizontal_alignment = 1
+
+[connection signal="area_entered" from="Body" to="." method="_on_body_area_entered"]
