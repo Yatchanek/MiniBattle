@@ -110,7 +110,7 @@ func boost():
 	crit_chance *= 1.25
 	
 	
-	spawn_label.emit(0, label_spawn_position.global_position, "Boost!")
+	spawn_label.emit(0, label_spawn_position.global_position, false, "Boost!")
 	sprite_2d.material.set_shader_parameter("color", Color.GREEN)
 	is_boosted = true
 	boost_duration = 30.0

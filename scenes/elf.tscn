@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://brskasyjohrs" path="res://scenes/combat_unit.tscn" id="1_xarj2"]
 [ext_resource type="Script" path="res://scripts/ranged_unit.gd" id="2_oqd4h"]
-[ext_resource type="Resource" uid="uid://cpdkqark1as1k" path="res://resources/melee_unit.tres" id="3_60p5a"]
+[ext_resource type="Resource" uid="uid://cxkbxfrx56sma" path="res://resources/ranged_unit.tres" id="3_lkmr5"]
 [ext_resource type="Shader" path="res://resources/combat_unit.gdshader" id="4_g268m"]
 [ext_resource type="Texture2D" uid="uid://bwd38haopsna8" path="res://graphics/bow.png" id="4_v1rr1"]
 
@@ -207,7 +207,7 @@ _data = {
 
 [node name="Elf" instance=ExtResource("1_xarj2")]
 script = ExtResource("2_oqd4h")
-unit_data = ExtResource("3_60p5a")
+unit_data = ExtResource("3_lkmr5")
 
 [node name="HealthBar" parent="." index="0"]
 offset_left = -10.0
